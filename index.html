@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mihka</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="site-nav">
+      <ul class="site-nav__list">
+        <li class="site-nav__item site-nav__item--logo">
+          <button class="site-nav__button"><span class="site-nav__gamburger"></span></button>
+        </li>
+        <li class="site-nav__item site-nav__item--catalog">
+          <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="site-nav__item site-nav__item--order">
+          <a class="site-nav__link" href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="site-nav__item site-nav__item--search">
+          <form class="site-nav__link site-nav__form" action="https://echo.htmlacademy.ru" method="POST">
+            <label class="site-nav__search">
+              <input class="site-nav__input" type="search" name="search">
+              <span class="site-nav__placeholder">Поиск по сайту</span>
+            </label>
+            <!-- <input class="site-nav__button" type="submit" value="?"> -->
+          </form>
+        </li>
+        <li class="site-nav__item site-nav__item--cart">
+          <a class="site-nav__link site-nav__cart" href="#">Корзина: <span>пока пуста</span></a>
+        </li>
+        <li class="site-nav__item site-nav__item--hide">
+          <a class="site-nav__link" href="#">Новые поступления</a>
+        </li>
+        <li class="site-nav__item site-nav__item--hide">
+          <a class="site-nav__link" href="#">Распродажа</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="slogan">
+      <h1 class="slogan__heading heading heading--big">Милые штуки ручной работы для дома</h1>
+    </section>
+    <nav class="catalog-nav">
+      <ul class="catalog-nav__list">
+        <li class="catalog-nav__item">
+          <a class="catalog-nav__link catalog-nav__link--interier" href="#">Предметы<br>интерьера</a>
+        </li>
+        <li class="catalog-nav__item">
+          <a class="catalog-nav__link catalog-nav__link--darken catalog-nav__link--toy" href="#">Детские<br>игрушки</a>
+        </li>
+      </ul>
+    </nav>
+    <small class="delivery">Бесплатная доставка по всей России</small>
+  </header>
+  <main>
+    <section class="best-good">
+      <div class="best-good__container-heading">
+        <h2 class="best-good__heading heading heading--small">Товар недели</h2>
+        <h3 class="best-good__name heading">Вязанные корзинки</h3>
+      </div>
+      <div class="best-good__container-characteristic">
+        <p class="best-good__description best-good--left-col">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class="best-good__feature best-good--left-col">
+          <tr class="best-good__row">
+            <th class="best-good__cell">Цвет:</th>
+            <td class="best-good__cell">&laquo;Тиффани&raquo;/серый</td>
+          </tr>
+          <tr class="best-good__row">
+            <th class="best-good__cell">Диаметр:</th>
+            <td class="best-good__cell">25 см</td>
+          </tr>
+          <tr class="best-good__row">
+            <th class="best-good__cell">Высота:</th>
+            <td class="best-good__cell">15 см</td>
+          </tr>
+        </table>
+        <img class="best-good__image" src="img/triple-set-mobile.jpg" alt="#">
+        <span class="best-good__price best-good--left-col">Цена: 990 руб.</span>
+        <button class="best-good__btn btn best-good--left-col"><span>Заказать</span></button>
+      </div>
+    </section>
+    <section class="about-us">
+      <h2 class="about-us__heading heading">Коротко о нас:</h2>
+      <ul class="about-us__list">
+        <li class="about-us__item">
+          <p class="about-us__description">Экологически чистые материалы</p>
+        </li>
+        <li class="about-us__item">
+          <p class="about-us__description">Скандинавский стиль по российской цене</p>
+        </li>
+        <li class="about-us__item">
+          <p class="about-us__description">Увеличивает лайки на фотографиях</p>
+        </li>
+        <li class="about-us__item">
+          <p class="about-us__description">Связано вручную с любовью и умилением</p>
+        </li>
+        <li class="about-us__item">
+          <p class="about-us__description">Поддержка отечественного производителя</p>
+        </li>
+        <li class="about-us__item">
+          <p class="about-us__description">Поставляется в подарочной упаковке</p>
+        </li>
+      </ul>
+    </section>
+    <section class="rewiews">
+      <h2 class="rewiews__heading heading">Отзывы</h2>
+      <blockquote class="rewiews__description">
+        <p class="rewiews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
+        больше лайков!</p>
+        <span class="rewiews__author">Анастасия Красильникова</span>
+        <span class="rewiews__nickname">@misssssiskras</span>
+      </blockquote>
+      <blockquote class="rewiews__description hide">
+        <p class="rewiews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil asperiores unde nobis laudantium, possimus expedita quam fugiat perspiciatis aspernatur magni iure eum ea magnam corrupti nostrum corporis modi vel rerum.</p>
+        <span class="rewiews__author">Анастасия Красильникова</span>
+        <span class="rewiews__nickname">@misssssiskras</span>
+      </blockquote>
+      <blockquote class="rewiews__description hide">
+        <p class="rewiews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptas culpa recusandae adipisci alias possimus, amet repellat magnam earum magni porro perferendis rem deleniti, officia ut neque accusantium, delectus expedita!</p>
+        <span class="rewiews__author">Анастасия Красильникова</span>
+        <span class="rewiews__nickname">@misssssiskras</span>
+      </blockquote>
+      <div class="rewiews__toggle-btns">
+        <button class="rewiews__toggle"><span class="rewiews__arrow rewiews__arrow--back"></span></button>
+        <button class="rewiews__toggle"><span class="rewiews__arrow rewiews__arrow--forward"></span></button>
+      </div>
+      <button class="rewiews__btn btn"><span>Написать</span></button>
+    </section>
+  </main>
+  <footer>
+    <section class="contacts">
+      <h2 class="contacts__heading heading heading--small">Контакты</h2>
+      <div class="contacts__copyright">
+        <dl class="contacts__row contacts__e-mail">
+          <dt class="contacts__term">e-mail:</dt>
+          <dd class="contacts__definition"><a class="contacts__link">info@mimimishkashop.ru</a></dd>
+        </dl>
+        <dl class="contacts__row contacts__adress">
+          <dt class="contacts__term">адрес:</dt>
+          <dd class="contacts__definition contacts__definition--narrow">
+            г. Санкт-Петербург,<br>
+            ул. Большая
+            Конюшенная,<br>
+            д. 19/8, офис 101
+          </dd>
+        </dl>
+      </div>
+      <div class="contacts__map"></div>
+      <button class="contacts__btn btn"><span>Напишите нам</span></button>
+    </section>
+    <section class="social">
+      <h2 class="hidden">Социальные сети и вебстудия</h2>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--inst" href="#">instgram</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#">Facebook</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--twtr" href="#">Twitter</a>
+        </li>
+      </ul>
+      <hr class="social__line">
+      <a class="social__my-logo" href="#">Сверстал <img class="logo"src="img/icons/aza.svg" alt="" width="20px" height="20px"></a>
+      <a class="social__logo" href="#"><img class="social__img" src="img/icons/logo/logo-modile.svg" alt="" width="86px" height="35px"></a>
+    </section>
+  </footer>
+</body>
+</html>

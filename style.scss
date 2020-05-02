@@ -1,0 +1,109 @@
+
+@import "sass/coomon.scss";
+
+$bs-c: #63d1bb;
+%m0p0 {margin: 0; padding: 0;} // @extend %m0p0;
+%p30px {padding: 0 30px;} // @extend %p30px;
+%mb30px {margin-bottom: 30px;} // @extend %mb30px;
+
+%flex-col { // @extend %flex-col;
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-cntr { // @extend %flex-cntr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%list-reset { // @extend %list-reset;
+  list-style: none;
+  margin: 0; 
+  padding: 0;
+}
+
+%link-reset { // @extend %link-reset;
+  text-decoration: none;
+  color: inherit;
+}
+
+%s-t-c {color: #767676;} // @extend %s-t-c;
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 24.5px;
+  line-height: 30px;
+  text-align: left;
+  @extend %m0p0;
+  @extend %mb30px;
+  
+  &--small {font-size: 17px;}
+  &--big {
+    font-size: 27px;
+    text-align: center;
+    font-weight: 700;
+    @extend %m0p0;
+  }  
+}
+
+input[type='submit'].btn,
+.btn {
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  min-height: 52px;
+  border: 2px solid #444444;
+}
+
+@media screen and (min-width: 768px) {
+  body {max-width: 768px;}
+
+  .heading {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+@media screen and (min-width: 1250px) {
+  body {max-width: 1250px;}
+}
+
+//////////////////////////////////////////////////////////////////
+@import "sass/header.scss";
+//////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+@import "sass/best-good.scss";
+//////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+@import "sass/about-us.scss";
+//////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+@import "sass/rewiews.scss";
+//////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+@import "sass/catalog.scss";
+//////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+@import "sass/application.scss";
+//////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+@import "sass/footer.scss";
+//////////////////////////////////////////////////////////////////
+
+.hide {display: none;}

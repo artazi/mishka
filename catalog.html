@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Mishka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<bod class="inner">
+  <header class="inner">
+    <nav class="site-nav">
+      <ul class="site-nav__list">
+        <li class="site-nav__item site-nav__item--logo">
+          <button class="site-nav__button"><span class="site-nav__gamburger"></span></button>
+        </li>
+        <li class="site-nav__item site-nav__item--catalog">
+          <a class="site-nav__link site-nav__link--active">Каталог товаров</a>
+        </li>
+        <li class="site-nav__item site-nav__item--order">
+          <a class="site-nav__link" href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="site-nav__item site-nav__item--search">
+          <form class="site-nav__link site-nav__form" action="https://echo.htmlacademy.ru" method="POST">
+            <label class="site-nav__search">
+              <input class="site-nav__input" type="search" name="search">
+              <span class="site-nav__placeholder">Поиск по сайту</span>
+            </label>
+            <!-- <input class="site-nav__button" type="submit" value="?"> -->
+          </form>
+        </li>
+        <li class="site-nav__item site-nav__item--cart">
+          <a class="site-nav__link site-nav__cart" href="#">Корзина: <span>пока пуста</span></a>
+        </li>
+        <li class="site-nav__item site-nav__item--hide">
+          <a class="site-nav__link" href="#">Новые поступления</a>
+        </li>
+        <li class="site-nav__item site-nav__item--hide">
+          <a class="site-nav__link" href="#">Распродажа</a>
+        </li>
+      </ul>
+    </nav>
+    <small class="delivery">Бесплатная доставка по всей России</small>
+  </header>
+  <h1 class="heading inner__heading">Каталог товаров</h1>
+  <main class="catalog">
+    <div class="catalog__row">
+      <article class="good">
+        <h2 class="hidden">Артикул:</h2>
+        <img src="img/catalog/photo-1-mobile.png" alt="Изображение товара" width="100%" height="auto">
+        <div class="good__description">
+          <h3 class="good__name">Зайчик-попрыгайчик</h2>
+          <span class="good__characteristic">Рост 30 см, вес 200 г</span>
+          <button class="good__btn">1200 руб.</button>
+        </div>
+      </article>
+      <article class="good hide">
+        <h2 class="hidden">Артикул:</h2>
+        <img src="img/catalog/photo-1-mobile.png" alt="Изображение товара" width="100%" height="auto">
+        <div class="good__description">
+          <h3 class="good__name">Зайчик-попрыгайчик</h2>
+          <span class="good__characteristic">Рост 30 см, вес 200 г</span>
+          <button class="good__btn">1200 руб.</button>
+        </div>
+      </article>
+      <article class="good hide">
+        <h2 class="hidden">Артикул:</h2>
+        <img src="img/catalog/photo-1-mobile.png" alt="Изображение товара" width="100%" height="auto">
+        <div class="good__description">
+          <h3 class="good__name">Зайчик-попрыгайчик</h2>
+          <span class="good__characteristic">Рост 30 см, вес 200 г</span>
+          <button class="good__btn">1200 руб.</button>
+        </div>
+      </article>
+    </div>
+    <div class="catalog__row">
+      <article class="good">
+        <h2 class="hidden">Артикул:</h2>
+        <img src="img/catalog/photo-2-mobile.png" alt="Изображение товара" width="100%" height="auto">
+        <div class="good__description">
+          <h3 class="good__name">Корзинка для белья</h2>
+          <span class="good__characteristic">Диаметр 15 см, высота 10 см</span>
+          <button class="good__btn">690 руб.</button>
+        </div>
+      </article>
+      <article class="good hide">
+        <h2 class="hidden">Артикул:</h2>
+        <img src="img/catalog/photo-2-mobile.png" alt="Изображение товара" width="100%" height="auto">
+        <div class="good__description">
+          <h3 class="good__name">Корзинка для белья</h2>
+          <span class="good__characteristic">Диаметр 15 см, высота 10 см</span>
+          <button class="good__btn">690 руб.</button>
+        </div>
+      </article>
+      <article class="good hide">
+        <h2 class="hidden">Артикул:</h2>
+        <img src="img/catalog/photo-2-mobile.png" alt="Изображение товара">
+        <div class="good__description">
+          <h3 class="good__name">Корзинка для белья</h2>
+          <span class="good__characteristic">Диаметр 15 см, высота 10 см</span>
+          <button class="good__btn">690 руб.</button>
+        </div>
+      </article>
+    </div>
+    <div class="catalog__row">
+      <article class="good">
+        <h2 class="hidden">Артикул:</h2>
+        <img src="img/catalog/photo-3-mobile.png" alt="Изображение товара" width="100%" height="auto">
+        <div class="good__description">
+          <h3 class="good__name">Большая корзинка для игрушек</h2>
+          <span class="good__characteristic">Диаметр 30 см, высота 30 см</span>
+          <button class="good__btn">1500 руб.</button>
+        </div>
+      </article>
+      <article class="good hide">
+        <h2 class="hidden">Артикул:</h2>
+        <img src="img/catalog/photo-3-mobile.png" alt="Изображение товара" width="100%" height="auto">
+        <div class="good__description">
+          <h3 class="good__name">Большая корзинка для игрушек</h2>
+          <span class="good__characteristic">Диаметр 30 см, высота 30 см</span>
+          <button class="good__btn">1500 руб.</button>
+        </div>
+      </article>
+      <article class="good hide">
+        <h2 class="hidden">Артикул:</h2>
+        <img src="img/catalog/photo-3-mobile.png" alt="Изображение товара" width="100%" height="auto">
+        <div class="good__description">
+          <h3 class="good__name">Большая корзинка для игрушек</h2>
+          <span class="good__characteristic">Диаметр 30 см, высота 30 см</span>
+          <button class="good__btn">1500 руб.</button>
+        </div>
+      </article>
+    </div>
+    <section class="work-process">
+      <h2 class="work-process__heading heading heading--small"><span>Процесс производства</span></h2>
+      <div class="work-process__video">
+        <img src="img/video.png" alt="" width="100%" height="auto">
+        <span class="work-process__close-btn"></span>
+      </div>
+      <p class="work-process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+      <button class="work-process__btn btn">Сделать заказ</button>
+    </section>
+  </main>
+  <footer>
+    <section class="social">
+      <h2 class="hidden">Социальные сети и вебстудия</h2>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--inst" href="#">instgram</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#">Facebook</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--twtr" href="#">Twitter</a>
+        </li>
+      </ul>
+      <hr class="social__line">
+      <a class="social__my-logo" href="#">Сверстал <img class="logo" src="img/icons/aza.svg" alt="" width="20px"
+          height="20px"></a>
+      <a class="social__logo" href="#"><img class="social__img" src="img/icons/logo/logo-modile.svg" alt="" width="86px"
+          height="35px"></a>
+    </section>
+  </footer>
+</body>
+</html>

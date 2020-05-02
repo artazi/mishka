@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mishka</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="inner">
+    <nav class="site-nav">
+      <ul class="site-nav__list">
+        <li class="site-nav__item site-nav__item--logo">
+          <button class="site-nav__button"><span class="site-nav__gamburger"></span></button>
+        </li>
+        <li class="site-nav__item site-nav__item--catalog">
+          <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="site-nav__item site-nav__item--order">
+          <a class="site-nav__link site-nav__link--active">Вязание на заказ</a>
+        </li>
+        <li class="site-nav__item site-nav__item--search">
+          <form class="site-nav__link site-nav__form" action="https://echo.htmlacademy.ru" method="POST">
+            <label class="site-nav__search">
+              <input class="site-nav__input" type="search" name="search">
+              <span class="site-nav__placeholder">Поиск по сайту</span>
+            </label>
+            <!-- <input class="site-nav__button" type="submit" value="?"> -->
+          </form>
+        </li>
+        <li class="site-nav__item site-nav__item--cart">
+          <a class="site-nav__link site-nav__cart" href="#">Корзина: <span>пока пуста</span></a>
+        </li>
+        <li class="site-nav__item site-nav__item--hide">
+          <a class="site-nav__link" href="#">Новые поступления</a>
+        </li>
+        <li class="site-nav__item site-nav__item--hide">
+          <a class="site-nav__link" href="#">Распродажа</a>
+        </li>
+      </ul>
+    </nav>
+    <small class="delivery">Бесплатная доставка по всей России</small>
+  </header>
+  <h1 class="heading inner__heading">Вязание на заказ</h1>
+  <main class="application">
+    <p class="application__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+    <form class="application__form" action="https://echo.htmlacademy.ru" method="POST">
+      <div class="application__type 
+                  application__div">
+        <h2 class="application__heading">Тип</h2>
+        <div>
+          <label class="aplication__label">
+            <input class="application__input--r
+                          hidden"
+                    type="radio"
+                    name="type"
+                    value="Аксессуар для интерьера"><span class="application__toggle application__toggle--r">Аксессуардля интерьера</span>
+          </label>
+          <label>
+            <input class="application__input--r
+                          hidden"
+                    type="radio"
+                    name="type"
+                    value="Детская игрушка"><span class="application__toggle application__toggle--r">Детская игрушка
+          </label>
+        </div>
+      </div>
+      <div class="application__color 
+                  application__div
+                  application__div--obg">
+        <h2 class="application__heading">Цвет</h2>
+        <div class="aplication__wrap">
+          <label class="aplication__label">
+            <input class="application__input--cb
+                          hidden"
+                   type="checkbox"
+                   name="color"
+                   value="Белый"><span class="application__toggle application__toggle--cb">Белый</span>
+          </label>
+          <label class="aplication__label">
+            <input class="application__input--cb
+                          hidden"
+                   type="checkbox"
+                   name="color"
+                   value="Серый"><span class="application__toggle application__toggle--cb">Серый</span>
+          </label>
+          <label class="aplication__label">
+            <input class="application__input--cb
+                          hidden"
+                   type="checkbox"
+                   name="color"
+                   value="Тиффани"><span class="application__toggle application__toggle--cb">&laquo;Тиффани&raquo;</span>
+          </label>
+          <label class="aplication__label">
+            <input class="application__input--cb
+                          hidden"
+                   type="checkbox"
+                   name="color"
+                   value="Чёрный"><span class="application__toggle application__toggle--cb">Чёрный</span>
+          </label>
+          <label class="aplication__label">
+            <input class="application__input--cb
+                          hidden"
+                   type="checkbox"
+                   name="color"
+                   value="Розовый"><span class="application__toggle application__toggle--cb">Розовый</span>
+          </label>
+          <label class="aplication__label">
+            <input class="application__input--cb
+                          hidden"
+                   type="checkbox"
+                   name="color"
+                   value="Оранжевый"><span class="application__toggle application__toggle--cb">Оранжевый</span>
+          </label>
+        </div>
+      </div>
+      <div class="application__name 
+                  application__div">
+        <h2 class="application__heading">ФИО</h2>
+        <div class="aplication__wrap-col">
+          <label class="aplication__label">
+            <span class="aplication__input-name">Имя:</span>
+            <input class="application__input--bb" 
+                   type="text"
+                   name="Имя" 
+                   placeholder="Введите ваше имя*" required>
+          </label>
+          <label class="aplication__label">
+            <span class="aplication__input-name">Фамилия:</span>
+            <input class="application__input--bb" 
+                   type="text"
+                   name="Фамилия" 
+                   placeholder="Укажите фамилию*" required>
+          </label>
+          <label class="aplication__label">
+            <span class="aplication__input-name">Отчество:</span>
+            <input class="application__input--bb" 
+                   type="text"
+                   name="Отчество" 
+                   placeholder="Отчество, если желаете">
+          </label>
+        </div>
+      </div>
+      <div class="application__phone 
+                  application__div
+                  application__div--obg">
+        <h2 class="application__heading">Тел</h2>
+        <input class="application__input--bb
+                      application__input--tel"
+               type="tel"
+               name="phone"
+               placeholder="+7 XXX XX XX*" required>
+      </div>
+      <div class="application__email 
+                  application__div
+                  application__div--obg">
+        <h2 class="application__heading">E-mail</h2>
+        <input class="application__input--bb
+                      application__input--email"
+               type="email" 
+               placeholder="Ваш Email*" required>
+      </div>
+      <div class="application__addition
+                       application__div">
+        <h2 class="application__heading">Доп</h2>
+        <textarea class="application__textarea" 
+                  name="addition" 
+                  placeholder="Опишите все ваши пожелания к заказу"></textarea>
+      </div>
+      <div class="aplication__wrap aplication__wrap--down">
+        <small class="aplication__footnote">*Поля обязательны для заполнения</small>
+        <input class="application__btn btn" type="submit" value="ОТПРАВИТЬ ЗАКАЗ">
+      </div>
+    </form>
+  </main>
+  <footer>
+    <section class="social">
+      <h2 class="hidden">Социальные сети и вебстудия</h2>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--inst" href="#">instgram</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#">Facebook</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--twtr" href="#">Twitter</a>
+        </li>
+      </ul>
+      <hr class="social__line">
+      <a class="social__my-logo" href="#">Сверстал <img class="logo" src="img/icons/aza.svg" alt="" width="20px"
+          height="20px"></a>
+      <a class="social__logo" href="#"><img class="social__img" src="img/icons/logo/logo-modile.svg" alt="" width="86px"
+          height="35px"></a>
+    </section>
+  </footer>
+</body>
+</html>

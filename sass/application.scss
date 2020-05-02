@@ -1,0 +1,207 @@
+.application {
+  @extend %flex-col;
+  @extend %p30px;
+  margin-bottom: 55px;
+}
+
+.application__description {
+  @extend %m0p0;
+  @extend %s-t-c;
+  font-size: 13px;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+.application__form {
+  @extend %flex-col;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.application__div {
+  @extend %flex-col;
+  @extend %m0p0;
+  @extend %mb30px;
+}
+
+.application__heading {
+  @extend %m0p0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  color: $bs-c;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 195px;
+    right: 0;
+    background-color: $bs-c;
+  }
+}
+
+.aplication__label {
+  @extend %flex-col;
+  margin-bottom: 20px;
+}
+
+.application__input--bb {
+  padding-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.aplication__input-name {margin-bottom: 15px;}
+
+.application__input--tel,
+.application__input--email {width: 100%;}
+
+.application__textarea {
+  @extend %m0p0;
+  width: 100%;
+  height: 140px;
+  padding: 15px;
+  border: 2px solid black;
+  resize: none;
+}
+
+.aplication__footnote {
+  @extend %mb30px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.application__toggle {
+  position: relative;
+  padding-left: 60px;
+  min-height: 40px;
+  line-height: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 3px solid #444444;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity 0.3s ease;
+  }
+}
+
+.application__toggle--r {
+  &::before {border-radius: 50%;}
+
+  &::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    left: 12px;
+    background-color: $bs-c;
+    border-radius: 50%;
+  }
+}
+
+.application__toggle--cb {
+  &::after {
+    width: 22px;
+    height: 16px;
+    left: 9px;
+    background-image: url(img/icons/application/tick.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.application__input--r:checked + .application__toggle--r::after,
+.application__input--cb:checked + .application__toggle--cb::after {opacity: 1;}
+
+.aplication__wrap {@extend %flex-col;}
+
+@media screen and (min-width: 768px) {
+  .application {padding: 0;}
+  .application__heading::after {display: none;}
+
+  .application__heading {
+    width: 167px; 
+    flex-shrink: 0;
+  }
+  .application__div {
+    padding: 50px 30px; 
+    margin: 0; 
+    flex-direction: row; 
+    align-items: flex-start;
+  }
+
+  .application__div--obg {background-color: #f1f1f1;}
+  .application__color.application__div {min-height: 305px;}
+
+  .aplication__wrap {
+    flex-direction: row;
+    flex-wrap: wrap; 
+    align-content: space-between;
+  }
+
+  .application__color .aplication__wrap {min-height: 205px;}
+  .application__color .aplication__label {margin: 0;}
+  .application__toggle--cb {width: 200px;}
+  .application__phone  {padding-bottom: 30px;}
+  .application__email  {padding-top: 0;}
+
+  .aplication__wrap-col {
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: column;
+  }
+  .application__btn {
+    order: -1; 
+    width: 230px; 
+    margin-left: 30px;
+  }
+  .aplication__footnote {
+    margin-left: auto; 
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .application__div {padding: 50px 275px 50px 100px;}
+
+  .application__heading {
+    width: 175px; 
+    padding-left: 65px;
+  }
+  .application__color.application__div {
+    min-height: 230px; 
+    padding-right: 0;
+  }
+
+  .application__color .aplication__wrap {min-height: 128px;}
+  .application__toggle--cb {width: 260px;}
+  .application__phone {padding-bottom: 40px;}
+  .application__email {padding-top: 0;}
+  .application__description {padding: 0 275px;}
+  .application__btn, 
+  .aplication__footnote {margin: 0;}
+  
+  .aplication__wrap--down {
+    padding: 0 275px; 
+    align-items: center; 
+    justify-content: space-between;
+  }
+}
