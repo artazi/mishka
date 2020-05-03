@@ -111,6 +111,19 @@ input[type=submit].btn,
   display: block;
   min-height: 52px;
   border: 2px solid #444444;
+  cursor: pointer;
+}
+input[type=submit].btn:hover, input[type=submit].btn:focus,
+.btn:hover,
+.btn:focus {
+  background-color: #444444;
+  color: white;
+  transition: ease 0.3s;
+}
+input[type=submit].btn:active,
+.btn:active {
+  color: #7c7c7c;
+  transition: ease 0.3s;
 }
 
 @media screen and (min-width: 768px) {
@@ -146,6 +159,7 @@ header {
   justify-content: center;
   min-height: 80px;
   border-bottom: 1px solid #ececec;
+  cursor: pointer;
 }
 .site-nav__item--logo {
   justify-content: flex-end;
@@ -156,6 +170,14 @@ header {
 }
 .site-nav__item--hide {
   display: none;
+}
+.site-nav__item:hover, .site-nav__item:focus {
+  opacity: 0.6;
+  transition: ease 0.3s;
+}
+.site-nav__item:active {
+  opacity: 0.3;
+  transition: ease 0.3s;
 }
 
 .site-nav__button {
@@ -276,16 +298,27 @@ header {
   width: 62px;
   height: 62px;
   right: 30px;
+  opacity: 0.7;
   background-position: center;
   background-repeat: no-repeat;
+  transition: all ease 0.3s;
+}
+.catalog-nav__link:hover::after, .catalog-nav__link:focus::after {
+  opacity: 1;
+}
+.catalog-nav__link:active {
+  color: #8be2d0;
+}
+.catalog-nav__link:active::after {
+  opacity: 0.3;
 }
 
 .catalog-nav__link--interier::after {
-  background-image: url(/img/icons/menu/interier.svg);
+  background-image: url(img/icons/menu/interier.svg);
 }
 
 .catalog-nav__link--toy::after {
-  background-image: url(/img/icons/menu/toy.svg);
+  background-image: url(img/icons/menu/toy.svg);
 }
 
 @media screen and (min-width: 768px) {
@@ -299,7 +332,7 @@ header {
     height: 22px;
     background-image: url(img/zigzag-descktop.svg);
     background-position: center;
-    background-repeat: no-repeat-y;
+    background-repeat: repeat-x;
   }
 
   .site-nav__button {
@@ -360,11 +393,13 @@ header {
     order: 3;
     flex-grow: 1;
     padding-left: 30px;
+    border-right: 1px solid #ececec;
   }
 
   .site-nav__item--catalog {
     order: 4;
     margin: 0 30px;
+    border-left: 1px solid #ececec;
   }
 
   .site-nav__item--order {
@@ -490,7 +525,7 @@ header {
   right: 0;
   background-image: url(img/zigzag.svg);
   background-position: center;
-  background-repeat: no-repeat-y;
+  background-repeat: repeat-x;
 }
 
 .best-good__name {
@@ -552,7 +587,6 @@ header {
   }
 
   .best-good__container-characteristic {
-    position: relative;
     min-height: 405px;
   }
 
@@ -726,12 +760,13 @@ header {
   content: "";
   position: absolute;
   display: block;
-  width: 100%;
   height: 5px;
+  right: 0;
+  left: 0;
   bottom: -35px;
-  left: 50%;
-  transform: translateX(-50%);
   background-image: url(img/zigzag.svg);
+  background-repeat: repeat-x;
+  background-position: center;
 }
 
 .rewiews__text {
@@ -763,14 +798,20 @@ header {
   width: 1px;
   height: 100%;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   background-color: #ececec;
 }
 
 .rewiews__toggle {
   width: 50%;
   height: inherit;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.rewiews__toggle:hover, .rewiews__toggle:focus {
+  opacity: 0.6;
+}
+.rewiews__toggle:active {
+  opacity: 0.3;
 }
 
 .rewiews__arrow {
@@ -865,6 +906,13 @@ header {
   .rewiews {
     padding-left: 275px;
     padding-right: 100px;
+    background-position: 100px;
+  }
+
+  .rewiews::after {
+    height: 24px;
+    left: 100px;
+    right: 100px;
   }
 
   .rewiews__btn {
@@ -884,6 +932,23 @@ header {
 
 .catalog__row {
   min-height: 375px;
+}
+
+.good:hover .good__description, .good:focus .good__description {
+  box-shadow: 0 3px 7px -4px black;
+  transition: ease 0.3s;
+}
+.good:active .good__description {
+  box-shadow: 0 3px 5px -5px black;
+  transition: ease 0.3s;
+}
+.good:hover .good__name, .good:focus .good__name {
+  opacity: 0.6;
+  transition: ease 0.3s;
+}
+.good:active .good__name {
+  opacity: 0.3;
+  transition: ease 0.3s;
 }
 
 .good__description {
@@ -948,8 +1013,8 @@ header {
   content: "";
   flex-shrink: 0;
   display: block;
-  width: 32px;
-  height: 22px;
+  width: 42px;
+  height: 46px;
   background-image: url(img/icons/video.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -976,7 +1041,7 @@ header {
     display: block;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -1px;
     height: 22px;
     background-image: url(img/zigzag-descktop.svg);
   }
@@ -1104,34 +1169,7 @@ header {
 
 .aplication__label {
   margin-bottom: 20px;
-}
-
-.application__input--bb {
-  padding-bottom: 15px;
-  border: none;
-  border-bottom: 2px solid black;
-}
-
-.aplication__input-name {
-  margin-bottom: 15px;
-}
-
-.application__input--tel,
-.application__input--email {
-  width: 100%;
-}
-
-.application__textarea {
-  width: 100%;
-  height: 140px;
-  padding: 15px;
-  border: 2px solid black;
-  resize: none;
-}
-
-.aplication__footnote {
-  font-size: 14px;
-  font-weight: 400;
+  cursor: pointer;
 }
 
 .application__toggle {
@@ -1149,7 +1187,8 @@ header {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  border: 3px solid #444444;
+  border: 2px solid #444444;
+  transition: 0.3s ease;
 }
 .application__toggle::after {
   content: "";
@@ -1159,6 +1198,12 @@ header {
   opacity: 0;
   transform: translateY(-50%);
   transition: opacity 0.3s ease;
+}
+.application__toggle:hover::before {
+  border-color: #63d1bb;
+}
+.application__toggle:active::before {
+  border-color: #c7c7c7;
 }
 
 .application__toggle--r::before {
@@ -1185,6 +1230,46 @@ header {
 .application__input--r:checked + .application__toggle--r::after,
 .application__input--cb:checked + .application__toggle--cb::after {
   opacity: 1;
+}
+
+.application__input--r:focus + .application__toggle::before,
+.application__input--cb:focus + .application__toggle::before {
+  border-color: #63d1bb;
+}
+
+.application__input--bb {
+  padding-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid black;
+}
+.application__input--bb:hover, .application__input--bb:focus, .application__input--bb:active {
+  border-color: #63d1bb;
+}
+
+.aplication__input-name {
+  margin-bottom: 15px;
+}
+
+.application__input--tel,
+.application__input--email {
+  width: 100%;
+}
+
+.application__textarea {
+  width: 100%;
+  height: 140px;
+  padding: 15px;
+  border: 2px solid black;
+  resize: none;
+}
+.application__textarea:hover, .application__textarea:focus, .application__textarea:active {
+  border-color: #63d1bb;
+  outline: none;
+}
+
+.aplication__footnote {
+  font-size: 14px;
+  font-weight: 400;
 }
 
 @media screen and (min-width: 768px) {
@@ -1214,6 +1299,18 @@ header {
 
   .application__color.application__div {
     min-height: 305px;
+  }
+
+  .aplication__wrap-col .aplication__label {
+    flex-direction: row;
+  }
+
+  .aplication__input-name {
+    margin-right: 20px;
+  }
+
+  .application__input--bb {
+    flex-grow: 1;
   }
 
   .aplication__wrap {
@@ -1292,6 +1389,8 @@ header {
 
   .application__description {
     padding: 0 275px;
+    font-size: 17px;
+    line-height: 30px;
   }
 
   .application__btn,
@@ -1313,6 +1412,19 @@ header {
 .contacts__e-mail,
 .contacts__adress {
   display: flex;
+}
+
+.contacts__link {
+  text-decoration: underline;
+  color: inherit;
+}
+.contacts__link:hover, .contacts__link:focus {
+  color: #63d1bb;
+  transition: ease 0.3s;
+}
+.contacts__link:active {
+  color: #d3ede8;
+  transition: ease 0.3s;
 }
 
 .contacts__row {
@@ -1344,6 +1456,14 @@ header {
   width: 160px;
   display: none;
 }
+.social__logo:hover, .social__logo:focus {
+  opacity: 0.6;
+  transition: ease 0.3s;
+}
+.social__logo:active {
+  opacity: 0.3;
+  transition: ease 0.3s;
+}
 
 .social__list {
   display: flex;
@@ -1358,6 +1478,14 @@ header {
   width: 25px;
   background-position: center;
   background-repeat: no-repeat;
+}
+.social__link:hover, .social__link:focus {
+  opacity: 0.6;
+  transition: ease 0.3s;
+}
+.social__link:active {
+  opacity: 0.3;
+  transition: ease 0.3s;
 }
 
 .social__link--inst {
@@ -1382,6 +1510,14 @@ header {
   justify-content: space-between;
   width: 160px;
 }
+.social__my-logo:hover, .social__my-logo:focus {
+  opacity: 0.6;
+  transition: ease 0.3s;
+}
+.social__my-logo:active {
+  opacity: 0.3;
+  transition: ease 0.3s;
+}
 
 .social__line {
   display: block;
@@ -1392,6 +1528,22 @@ header {
 }
 
 @media screen and (min-width: 768px) {
+  .contacts {
+    position: relative;
+  }
+  .contacts::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 47px;
+    height: 81px;
+    top: 0;
+    right: 0;
+    background-image: url(img/icons/flag.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   .contacts__copyright {
     flex-direction: row;
   }
@@ -1454,7 +1606,7 @@ header {
     position: absolute;
     width: 525px;
     height: 467px;
-    right: 0;
+    right: 100px;
     margin-bottom: 0;
   }
 

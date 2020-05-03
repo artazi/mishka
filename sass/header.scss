@@ -16,6 +16,7 @@ header:not(.inner) {@extend %mb30px;}
   justify-content: center;
   min-height: 80px;
   border-bottom: 1px solid #ececec;
+  cursor: pointer;
   
   &--logo {
     justify-content: flex-end;
@@ -26,6 +27,11 @@ header:not(.inner) {@extend %mb30px;}
   }
 
   &--hide {display: none;}
+
+  &:hover,
+  &:focus {opacity: 0.6; transition: ease 0.3s;}
+
+  &:active {opacity: 0.3; transition: ease 0.3s;}
 }
 
 .site-nav__button {
@@ -125,9 +131,11 @@ header:not(.inner) {@extend %mb30px;}
   min-height: 100px;
   color: white;
   background-color: $bs-c;
+  
   &--darken {
     background-color: darken($bs-c, 5%);
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -135,13 +143,24 @@ header:not(.inner) {@extend %mb30px;}
     width: 62px;
     height: 62px;
     right: 30px;
+    opacity: 0.7;
     background-position: center;
     background-repeat: no-repeat;
+    transition: all ease 0.3s;
+  }
+
+  &:hover::after,
+  &:focus::after {opacity: 1;}
+
+  &:active {
+    color: #8be2d0;
+    
+    &::after {opacity: 0.3;}
   }
 }
 
-.catalog-nav__link--interier::after {background-image: url(/img/icons/menu/interier.svg);}
-.catalog-nav__link--toy::after {background-image: url(/img/icons/menu/toy.svg);}
+.catalog-nav__link--interier::after {background-image: url(img/icons/menu/interier.svg);}
+.catalog-nav__link--toy::after {background-image: url(img/icons/menu/toy.svg);}
 
 @media screen and (min-width: 768px) {
   header:not(.inner)::after {
@@ -154,7 +173,7 @@ header:not(.inner) {@extend %mb30px;}
     height: 22px;
     background-image: url(img/zigzag-descktop.svg);
     background-position: center;
-    background-repeat: no-repeat-y;
+    background-repeat: repeat-x;
   }
   
   .site-nav__button {display: none;}
@@ -192,10 +211,12 @@ header:not(.inner) {@extend %mb30px;}
     order: 3; 
     flex-grow: 1; 
     padding-left: 30px;
+    border-right: 1px solid #ececec;
   }
   .site-nav__item--catalog {
     order: 4; 
-    margin: 0 30px; 
+    margin: 0 30px;
+    border-left: 1px solid #ececec;
   }
   .site-nav__item--order {order: 5;}
   

@@ -14,7 +14,7 @@
     right: 0;
     background-image: url(img/zigzag.svg);
     background-position: center;
-    background-repeat: no-repeat-y;
+    background-repeat: repeat-x;
   }
 }
 
@@ -81,10 +81,9 @@
     width: 100px;
     margin-bottom: 0;
   }
-  .best-good__container-characteristic {
-    position: relative;
-    min-height: 405px;
-  }
+
+  .best-good__container-characteristic {min-height: 405px;}
+  
   .best-good__image {
     position: absolute;
     right: 0;

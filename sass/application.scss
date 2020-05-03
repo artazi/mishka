@@ -47,32 +47,7 @@
 .aplication__label {
   @extend %flex-col;
   margin-bottom: 20px;
-}
-
-.application__input--bb {
-  padding-bottom: 15px;
-  border: none;
-  border-bottom: 2px solid black;
-}
-
-.aplication__input-name {margin-bottom: 15px;}
-
-.application__input--tel,
-.application__input--email {width: 100%;}
-
-.application__textarea {
-  @extend %m0p0;
-  width: 100%;
-  height: 140px;
-  padding: 15px;
-  border: 2px solid black;
-  resize: none;
-}
-
-.aplication__footnote {
-  @extend %mb30px;
-  font-size: 14px;
-  font-weight: 400;
+  cursor: pointer;
 }
 
 .application__toggle {
@@ -90,7 +65,8 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    border: 3px solid #444444;
+    border: 2px solid #444444;
+    transition: 0.3s ease;
   }
   
   &::after {
@@ -102,6 +78,9 @@
     transform: translateY(-50%);
     transition: opacity 0.3s ease;
   }
+
+  &:hover::before {border-color: $bs-c;}
+  &:active::before {border-color: #c7c7c7;}
 }
 
 .application__toggle--r {
@@ -127,9 +106,45 @@
     background-repeat: no-repeat;
   }
 }
-
 .application__input--r:checked + .application__toggle--r::after,
 .application__input--cb:checked + .application__toggle--cb::after {opacity: 1;}
+
+.application__input--r:focus + .application__toggle::before,
+.application__input--cb:focus + .application__toggle::before {border-color: $bs-c;}
+
+.application__input--bb {
+  padding-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid black;
+
+  &:hover,
+  &:focus,
+  &:active {border-color: $bs-c;}
+}
+
+.aplication__input-name {margin-bottom: 15px;}
+
+.application__input--tel,
+.application__input--email {width: 100%;}
+
+.application__textarea {
+  @extend %m0p0;
+  width: 100%;
+  height: 140px;
+  padding: 15px;
+  border: 2px solid black;
+  resize: none;
+
+  &:hover,
+  &:focus,
+  &:active {border-color: $bs-c; outline: none;}
+}
+
+.aplication__footnote {
+  @extend %mb30px;
+  font-size: 14px;
+  font-weight: 400;
+}
 
 .aplication__wrap {@extend %flex-col;}
 
@@ -150,7 +165,9 @@
 
   .application__div--obg {background-color: #f1f1f1;}
   .application__color.application__div {min-height: 305px;}
-
+  .aplication__wrap-col .aplication__label {flex-direction: row;}
+  .aplication__input-name {margin-right: 20px;}
+  .application__input--bb {flex-grow: 1;}
   .aplication__wrap {
     flex-direction: row;
     flex-wrap: wrap; 
@@ -195,7 +212,11 @@
   .application__toggle--cb {width: 260px;}
   .application__phone {padding-bottom: 40px;}
   .application__email {padding-top: 0;}
-  .application__description {padding: 0 275px;}
+  .application__description {
+    padding: 0 275px; 
+    font-size: 17px;
+    line-height: 30px;
+  }
   .application__btn, 
   .aplication__footnote {margin: 0;}
   
